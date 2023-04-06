@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+
+    <TextView
+        android:id="@+id/tvView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/marginTitleTop_descrip"
+        android:textStyle="bold"
+        android:textSize="@dimen/title_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ExampleText"/>
+
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="@dimen/descrip_photos_width"
+        android:layout_height="@dimen/descrip_photos_height"
+        app:layout_constraintTop_toBottomOf="@+id/tvView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/marginStart_descrip"
+        android:src="@drawable/ricksanchez"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView2"
+        app:layout_constraintTop_toBottomOf="@+id/imgView"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
