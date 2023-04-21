@@ -1,22 +1,24 @@
-package com.example.pmd_l2;
+package com.example.pmd_l2.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.pmd_l2.R;
+import com.example.pmd_l2.entity.Episode;
+
 public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder2> {
 
     Context context;
-    private String[] listData;
+    private Episode[] listData;
 
 
-    public MyAdapter2(Context context, String[] listData) {
+    public MyAdapter2(Context context, Episode[] listData) {
         this.context = context;
         this.listData = listData;
     }
@@ -32,7 +34,7 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder2> {
 
     @Override
     public void onBindViewHolder(@NonNull MyAdapter2.ViewHolder2 holder, int position) {
-        holder.description.setText(listData[position]);
+        holder.description.setText(listData[position].description);
     }
 
     @Override
